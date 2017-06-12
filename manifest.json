@@ -1,0 +1,23 @@
+{
+  "name": "Socket XAD Addon",
+  "description": "Socket Addon",
+  "version": "1.0",
+  "permissions": [
+    "contextMenus","activeTab","tabs","http://*/*", "https://*/*","cookies","alarms", "notifications","storage"
+  ],
+  "browser_action": {
+      "default_title": "XAD Socket",
+      "default_icon": "img/icon_logout.png",
+      "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["js/jquery3.2.1.min.js","js/socket.io.js","js/common.js","js/background.js"]
+  },
+  "content_scripts": [
+      {
+        "matches": ["http://*/*","https://*/*"],
+        "js": ["js/jquery3.2.1.min.js","js/clients.js"]
+      }
+   ],
+  "manifest_version": 2
+}

@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>QUnit Test Suite</title>
+	<script type="text/javascript" charset="utf-8" src="./jquery.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./qunit.js"></script>
+	<link rel="stylesheet" href="./qunit.css" type="text/css" media="screen" charset="utf-8">
+	<style type="text/css" media="screen">
+		#qunit-fixture {display:none;}
+	</style>
+	<script type="text/javascript" charset="utf-8" src="../jQuery.fireEvent.js"></script>
+	
+	<script type="text/javascript" charset="utf-8" src="./test.jQuery.fireEvent.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("body").on("keyup","#testInput",function(e){
+				console.log("test fire event keyup:");
+				console.log( e );
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1 id="qunit-header">QUnit Test Suite</h1>
+	<h2 id="qunit-banner"></h2>
+	<div id="qunit-testrunner-toolbar"></div>
+	<h2 id="qunit-userAgent"></h2>
+	<ol id="qunit-tests"></ol>
+	<div id="qunit-fixture">
+
+	<form action="form_action.php" method="get">
+		<div>
+			<label>First name</label>
+			<input type="text" name="fname" value="Mickey" />
+			<label>Last name</label>
+			<input id="inputtxt" type="text" name="lname" value="Mouse" />
+			<input type="submit" id="iptsubmit" value="Submit" />
+		</div>
+	</form>
+	
+	<img src="about:blank" alt=" " />
+	
+	<a href="?" id="link">Test</a>
+	
+	<div id="nested">
+	<span>
+		Nested trigger
+	</span>
+	</div>
+	
+	
+</div>
+<input type="text" id="testInput">
+</body>
+</html>

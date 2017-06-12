@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KeyPad</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<script type="text/javascript" src="js/jquery3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/keypad.js"></script>
+    <style>
+		html {
+			margin:0;
+			padding:0;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			background:#66CCFF ;
+		}
+    
+		.page-wrap {
+			display:table;
+			margin:5px auto;
+			background:white;
+			padding:5px;
+			cursor: pointer;
+		}
+		.showphone{
+			margin:0 auto;
+			min-height:50px;
+			padding:7px 40px;
+			color:#fff;
+			font-size:25px;
+			background-color: #66CCFF;
+			text-algin:center;
+		}
+		#phonenumber{
+			font-size:20px !important;
+		}
+    
+		.keypad {
+			float:left;
+			text-align:center;
+			font-family:'Helvetica Neue',sans-serif;
+			font-weight:100;
+		}
+    
+    
+		.keypad > span {
+			display:inline-block;
+			width:50px;
+			height:50px;
+			margin:10px;
+			line-height:50px;
+			border-radius:50px;
+			border:1px #5A58FF solid;
+			background-color:white;
+			
+			font-size:26px;
+			color:#343434;
+			transition:.5s;
+			-webkit-transition:.5s;
+		}
+		
+		 .keypad > span:active {
+			color:white;
+			background:#5A58FF;
+			transition:0s;
+			-webkit-transition:0s;
+		}
+    
+		.call {
+			background-color:#66FF66;
+			font-size:26px;
+			font-weight:200;
+			color:white;
+			line-height:50px;
+			border-radius:5px;
+			transition:0.2s;
+			-webkit-transition:0.2s;
+		}
+		
+		.call:active {
+			box-shadow:0 0 80px 1px black inset;
+			transition:0s;
+			-webkit-transition:0s;
+		}
+		.watermask{
+			display:none;
+			position: fixed;
+			z-index: 9999999;
+			background-color: #ddd;
+			opacity: 0.7;
+			min-width: 100%;
+			min-height: 650px;
+			color: red;
+			text-align: center;
+			padding-top: 30%;
+		}
+		.watermask > span{
+			opacity:1;
+			font-size:35px;
+		}
+	</style>
+  </head>
+<body>
+	<div class="watermask"></div>
+    <div class="showphone">
+		<input class="form-control" id="phonenumber" type="text" maxlength="11">
+	</div>
+    <div class="page-wrap">		
+		<div class="keypad" id="divKeypad">
+			<span class="key" key="1">1</span>
+			<span class="key" key="2">2</span>
+			<span class="key" key="3">3</span>
+			<br>
+			<span class="key" key="4">4</span>
+			<span class="key" key="5">5</span>
+			<span class="key" key="6">6</span>
+			<br>
+			<span class="key" key="7">7</span>
+			<span class="key" key="8">8</span>
+			<span class="key" key="9">9</span>
+			<br>
+			<span class="key" key="*">*</span>
+			<span class="key" key="0">0</span>
+			<span class="key" key="#">#</span>
+			<br>
+			<div class="call">Call</div>
+		</div>
+    </div>    
+</body>
+</html>
